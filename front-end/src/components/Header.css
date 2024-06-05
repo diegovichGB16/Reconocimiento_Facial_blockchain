@@ -1,0 +1,119 @@
+
+.icono{
+    height: 50px;   
+    width: 280px;
+    position: relative;
+}
+
+.list{
+    list-style-type: none;
+    padding-left: 0; 
+    background-color: rgb(218, 243, 247);
+    height: 305px;
+    width: 329px;
+    position: absolute;
+    left: 0; right: 0; top: 90px;
+    margin: auto;
+    padding-top: 39px; padding-bottom: 39px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 20px;    
+    display: none;
+}
+
+.list li a {
+    text-decoration: none;
+    color: rgb(96, 97, 97);
+}
+
+ul.list .especialist{
+    background-color: rgb(161, 215, 231);
+    width: 140px;
+    height: 56px;
+    display: grid;
+    place-content: center;
+    border-radius: 100px;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+ul.list .especialist a:hover{
+    color: darkslateblue;
+}
+
+.list::after{
+    content: "";
+    position: absolute;
+    top: -24px; right: 0;
+    border-style: solid;
+    border-color: rgb(218, 243, 247);
+    border-width: 12px;
+    border-top-color: transparent;
+    border-top: 600;
+    border-left: 600;
+    border-left-color: transparent;
+}
+
+header{
+    /*background-color: blue;*/
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 14px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.Burger{
+    height: 45px;
+    cursor: pointer;
+    padding-top: 16px;
+    padding-right: 8px;
+}
+
+
+
+/* Estilos para dispositivos con un ancho máximo de 640px */
+@media (min-width: 640px) {
+    .list{
+        display: flex;
+        background-color: transparent;
+        flex-direction: row;
+        top: 0px; height: 0px; 
+        position: relative;
+        padding-top: 32px;padding-bottom: 0; 
+        justify-content: space-evenly;
+        width: 280px;    
+    }
+    .burgermenu{
+        display: none;          
+    }
+    .list li a {
+        color: rgb(94, 130, 197);
+    }
+    .list::after{
+        display: none;
+    }
+    ul.list .especialist{
+        width: 120px;
+        height: 38px;
+    }
+    header{
+        padding-right: 0px;
+    }
+}
+
+@media (min-width: 768px) { 
+    .list{
+        width: 360px;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .list{
+        width: 440px;
+    }
+}

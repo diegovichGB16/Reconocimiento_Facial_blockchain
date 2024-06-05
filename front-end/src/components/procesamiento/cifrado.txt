@@ -1,0 +1,24 @@
+        /*
+        const secretKey = "pikachu";
+
+        // Convierte la cadena de datos en formato base64 en un ArrayBuffer
+        const binaryString = atob(canvasDataURL.split(",")[1]);
+        const arrayBuffer = new ArrayBuffer(binaryString.length);
+        const uintArray = new Uint8Array(arrayBuffer);
+        for (let i = 0; i < binaryString.length; i++) {
+            uintArray[i] = binaryString.charCodeAt(i);
+        }
+
+        // Encripta el ArrayBuffer usando CryptoJS
+        const encryptedData = CryptoJS.AES.encrypt(
+            CryptoJS.lib.WordArray.create(uintArray),
+            secretKey
+        ).toString();
+        console.log("la imagen encriptada" + encryptedData);
+
+        const dataToSave = {
+            encryptedData: encryptedData,
+        };
+        const jsonData = JSON.stringify(dataToSave);
+        this.props.onImageCapture(jsonData);
+        */

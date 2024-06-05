@@ -1,0 +1,40 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+}
+.secTitulo{
+    width: 100%;
+    align-items: center;
+    align-content: center;
+}
+.Titu{    
+    font-size: 58px;
+    text-align: center;
+    color: rgb(20, 144, 148);
+    font-family: "Caveat", cursive;
+    margin: 10px;
+}
+.secRecog{
+    width: 100%;
+}
+.Recognition{
+    width: 100%;   
+}
+@media (min-width: 1200px){
+    .content{
+        flex-direction: row;
+    }
+    .secTitulo{
+        width: 35%;
+    }
+    .Titu{
+        width: 100%;
+        font-size: 98px;
+        text-align: right;
+    }
+    .secRecog{
+        width: 65%;
+    }
+}

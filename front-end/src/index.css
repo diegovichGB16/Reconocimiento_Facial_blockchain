@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+ /* background-color: #393939;*/
+  color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'Barlow', sans-serif, 'Fraunces', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+
+ background-image: url('./Assets/Mobile.jpg');
+}

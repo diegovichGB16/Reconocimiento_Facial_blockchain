@@ -1,0 +1,25 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract DataStorage {
+    address public owner;
+    address public metaMaskAddress;
+    string public ipfsCID;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only owner can call this function");
+        _;
+    }
+
+    function setMetaMaskAddress(address _address) public onlyOwner {
+        metaMaskAddress = _address;
+    }
+
+    function setIPFSCID(string memory _cid) public onlyOwner {
+        ipfsCID = _cid;
+    }
+}

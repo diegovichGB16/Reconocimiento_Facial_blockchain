@@ -1,0 +1,181 @@
+.secF{
+    padding-top: 100px;  
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.tituloF{
+    color: rgb(67, 153, 238);
+    font-size: 46px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+#formularioM{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    background-color: rgb(226, 229, 238);
+    margin: 20px;
+    min-width: 440px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .6);
+    border-radius: 10px;   
+    
+
+}
+
+
+#formularioWallet {
+    border-radius: 10px;
+    /*background-color: #f5f5f5;*/
+    width: 80%;
+    align-items: center;
+    padding: 10px;
+    padding-top: 40px;
+}
+.espacio2 {
+    padding-bottom: 10px;
+}
+
+#formularioFoto {
+    width: 80%;
+    align-items: center;
+    border: solid 1px #ccc;
+    padding: 5px;
+    margin-right: 20px;
+    display: flex;
+}
+.formularioRostro {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    /*background-color: #f5f5f5;*/
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boton {
+    margin-top: 20px;
+
+}
+
+.espacioFoto {
+    width: 100%;
+    height: 280px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.rostro {
+    width: 100%; height: 100%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+}
+
+.confCamara {
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.espacioBoton {
+    width: 390px;   
+    text-align: center;
+    background-color: rgb(0, 0, 0);    
+}
+
+.botonCaptura {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 6px 0;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+
+.imgContainer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+p{
+    text-align: center;
+}
+
+.img {
+    width: 122px;
+    height: 122px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A9A9A9;
+    
+}
+.icoprofile{
+    font-size: 6em;
+    padding-top: 20px;
+    color: wheat;
+    position: relative;
+}
+
+.registro {
+    text-align: center;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    width: 100%;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.Biometrico{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 880px){
+    .tituloF{
+        text-align: center;
+        font-size: 64px;
+    }
+    #formularioM{
+        padding-top: 0;
+        flex-direction: column;
+        margin: 42px;
+        width: 1020px;
+
+    }
+    .Biometrico{
+        flex-direction: row;
+        padding-top: 40px;
+    }
+    #formularioWallet{
+        max-width: 840px;
+        margin-top: 20px;
+    }
+    .formularioRostro {
+        margin-top: 50px;
+    }
+    .registro{
+        margin: 40px;
+    }
+}
