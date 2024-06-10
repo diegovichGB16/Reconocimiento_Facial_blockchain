@@ -10,23 +10,32 @@ import CryptoJS from 'crypto-js';
 import UserCidRegistry from './build/contracts/UserCidRegistry.json' assert { type: 'json' };
 import { generarCredencial, verificar } from './emitirCredenciales.js';
 
-
+/*Establece conexión con ganache e ipfs. 
+*se levanta el puerto 3000
+*/
 const app = express();
 const PORT = 3001;
 const web3 = new Web3('http://127.0.0.1:7545');
+const ipfs = create({ host: '127.0.0.1', port: 5001, protocol: 'http' });
 app.use(cors());
 app.use(bodyParser.json());
 
+//se verifica la conexión con ganache.
 web3.eth.net.isListening()
     .then(() => console.log('Conexión exitosa con Ganache'))
     .catch(error => console.error('Error al conectar con Ganache:', error));
-const ipfs = create({ host: '127.0.0.1', port: 5001, protocol: 'http' });
 
+/*se cargan los certificados x.509 con la clave privada
+*/
 const options = {
     key: fs.readFileSync('./certificados/private-key.pem'),
     cert: fs.readFileSync('./certificados/cert.pem'),
 };
 
+/*
+*función encargada de establecer comunicación con el contrato inteligente.
+y con el ABI del contrato.
+ */
 const Contract = async (web3) => {
     const networkId = await web3.eth.net.getId();
     console.log("network id: ", networkId);
@@ -41,6 +50,8 @@ const Contract = async (web3) => {
 const descifrar = (textoCifrado, clave) => {
     return CryptoJS.AES.decrypt(textoCifrado, clave).toString(CryptoJS.enc.Utf8);
 };
+
+//LLamado para registrar datos en el servidor.
 
 app.post('/api/register', async (req, res) => {
     try {
@@ -73,6 +84,8 @@ app.post('/api/register', async (req, res) => {
         res.status(500).json({ success: false, error: 'Error interno del servidor' });
     }
 });
+
+//LLamado para iniciar el inicio de sesión en el servidor. 
 
 app.post('/api/login', async (req, res) => {
     try {

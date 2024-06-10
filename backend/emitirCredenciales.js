@@ -29,37 +29,37 @@ export async function generarCredencial(datos) {
                             os: {
                                 "@id": "https://example.org/os",
                                 "@context": {
-                                    name: "https://example.org/os/name",
-                                    version: "https://example.org/os/version"
+                                    name: "@name",
+                                    version: "@version"
                                 }
                             },
-                            seedOtp: "https://example.org/seedOtp"
+                            seedOtp: "@seedOtp"
                         }
                     },
                     ProfileInformation: {
                         "@id": "https://example.org/ProfileInformation",
                         "@context": {
-                            RegistrationMode: "https://example.org/RegistrationMode",
+                            RegistrationMode: "@RegistrationMode",
                             ethereumAddress: "https://schema.org/Text",
-                            Biometrics: "https://example.org/Biometrics"
+                            Biometrics: "@Biometrics"
                         }
                     },
                     Biometrics: {
                         "@id": "https://example.org/Biometrics",
                         "@context": {
-                            type: "https://example.org/Biometrics/type",
-                            version: "https://example.org/Biometrics/version",
-                            format: "https://example.org/Biometrics/format",
-                            BiometricsData: "https://example.org/Biometrics/BiometricsData"
+                            type: "@type",
+                            version: "@version",
+                            format: "@format",
+                            BiometricsData: "@BiometricsData"
                         }
                     },
                     KeyCliente: {
                         "@id": "https://example.org/KeyCliente",
                         "@context": {
-                            Clave: "https://example.org/KeyCliente/Clave"
+                            Clave: "@Clave"
                         }
                     },
-                    ts: "https://example.org/ts"
+                    ts: "@ts"
                 }
             ],
             id: `urn:uuid:${uuidv4()}`,
@@ -67,7 +67,6 @@ export async function generarCredencial(datos) {
             issuer: did,
             issuanceDate: date,
             credentialSubject: {
-                id: did,
                 ...datosObjeto,
             }
         }),
